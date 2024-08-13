@@ -11,7 +11,7 @@ competition_df = pd.read_csv("Olympics 2024.csv")
 st.title("Olympics 2024 Medal Analysis")
 
 # Sidebar for navigation
-st.sidebar.image("logo.png", use_column_width=True)
+st.sidebar.image("o_logo.png", use_column_width=True)
 st.sidebar.title("Navigation")
 section = st.sidebar.radio("Go to", ["Medal Analysis", "Competitions Analysis"])
 
@@ -134,13 +134,13 @@ elif section == "Competitions Analysis":
     ax.set_xticklabels(competition_totals['Competitions'], rotation=90, ha='right')
     st.pyplot(fig)
 
-    # Analysis 6: Correlation Between Medal Types
-    st.write("## Correlation Between Medal Types")
-    medal_corr = competition_df[['Gold', 'Silver', 'Bronze']].corr()
-    fig, ax = plt.subplots()
-    sns.heatmap(medal_corr, annot=True, cmap="coolwarm", ax=ax)
-    ax.set_title("Correlation Between Medal Types")
-    st.pyplot(fig)
+    # # Analysis 6: Correlation Between Medal Types
+    # st.write("## Correlation Between Medal Types")
+    # medal_corr = competition_df[['Gold', 'Silver', 'Bronze']].corr()
+    # fig, ax = plt.subplots()
+    # sns.heatmap(medal_corr, annot=True, cmap="coolwarm", ax=ax)
+    # ax.set_title("Correlation Between Medal Types")
+    # st.pyplot(fig)
 
     # Country Details and Interaction
     st.write("## Country Details and Interaction")
